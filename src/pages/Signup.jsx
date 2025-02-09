@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "./Button";
+import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -36,8 +37,10 @@ export default function Signup() {
   };
 
   return (
-    <div className="max-w-md mx-auto">
-      <div className="bg-white p-8 rounded-lg shadow-sm border">
+    <>
+    <Navbar onHome={false}/>
+    <div className="h-[90vh] flex items-center justify-center">
+      <div className="bg-white p-8 rounded-lg shadow-sm border w-[25%]">
         <h1 className="text-2xl font-bold text-center mb-6">Create an account</h1>
 
         {error && <p className="text-red-500 text-sm text-center mb-4">{error}</p>}
@@ -109,5 +112,6 @@ export default function Signup() {
         </p>
       </div>
     </div>
+    </>
   );
 }

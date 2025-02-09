@@ -1,12 +1,11 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import Button from "./Button";
+import Button from "../components/Button";
+import Navbar from "../components/Navbar";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [fullName, setFullName] = useState("");
-  const [isMentor, setIsMentor] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   
@@ -36,7 +35,9 @@ export default function Login() {
   };
 
   return (
-    <div className="max-w-md mx-auto">
+    <>
+    <Navbar onHome={false}/>
+    <div className="h-[90vh] flex items-center justify-center">
       <div className="bg-white p-8 rounded-lg shadow-sm border">
         <h1 className="text-2xl font-bold text-center mb-6">Login to your Account</h1>
 
@@ -82,5 +83,6 @@ export default function Login() {
         </p>
       </div>
     </div>
+    </>
   );
 }
