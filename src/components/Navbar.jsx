@@ -1,7 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-
+import { Link, useNavigate } from 'react-router-dom'
+import { useAuth } from '../contexts/AuthContext'
+import { auth } from '../firebase';
+import { signOut } from 'firebase/auth';
 function Navbar({onHome}) {
+    const {currentUser} = useAuth();
+    const navigate = useNavigate();
+
+    const signUserOut = async () => {
+        try {
+            await signOut(auth);
+            navigate("/");
+        } catch (err) {
+          setError(err.message);
+        }
+      };
+
     return (
         <>
             <div className='flex justify-between mx-4 my-4'>
@@ -11,7 +25,7 @@ function Navbar({onHome}) {
                     </Link>
                 </div>
             
-                {onHome && <div className='flex gap-3 mr-1 mt-1'>
+                {onHome && !currentUser && <div className='flex gap-3 mr-1 mt-1'>
                     <div>
                         <Link className='px-3 py-2 border border-violet-600 rounded-md hover:cursor-pointer font-medium' to={"/login"}>
                             Login
@@ -23,6 +37,11 @@ function Navbar({onHome}) {
                         </Link>
                     </div>
                 </div>}
+                    {currentUser && <div>
+                        <button className='px-3 py-2 bg-[#ff5151] font-medium text-white border rounded-md hover:cursor-pointer hover:bg-[#f82b2b] duration-300' onClick={signUserOut}>
+                            Logout
+                        </button>
+                    </div>}
             </div>
         </>
     )

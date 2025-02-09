@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { auth } from "../firebase";
 
 export default function Signup() {
   const [email, setEmail] = useState("");
@@ -11,7 +13,7 @@ export default function Signup() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   
-  const navigate = useNavigate(); // To redirect on success
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,14 +27,20 @@ export default function Signup() {
     }
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      console.log({ fullName, email, password, isMentor });
-      navigate("/dashboard"); 
-    } catch (err) {
-      setError("Registration failed. Please try again.");
-    } finally {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+      await updateProfile(user, {
+        displayName: fullName,
+      })
       setLoading(false);
+      navigate("/dashboard");
+    } catch (err) {
+      setLoading(false);
+      alert(err);
     }
   };
 
@@ -97,7 +105,7 @@ export default function Signup() {
               className="rounded border-gray-300 text-primary focus:ring-primary"
             />
             <label htmlFor="isMentor" className="text-sm text-gray-700">
-              I want to be a mentor
+              Join as an Alumni mentor
             </label>
           </div>
 

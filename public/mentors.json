@@ -4,70 +4,74 @@
       "name": "Rohan Mehta",
       "current_position": "Software Engineer at Google",
       "pass_out_year": 2020,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/1.jpg"
     },
     {
       "id": 2,
       "name": "Priya Sharma",
       "current_position": "Data Analyst at TCS",
       "pass_out_year": 2019,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/women/2.jpg"
+      
     },
     {
       "id": 3,
       "name": "Aditya Verma",
       "current_position": "Product Manager at Flipkart",
       "pass_out_year": 2021,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/3.jpg"
+      
     },
     {
       "id": 4,
       "name": "Neha Kapoor",
       "current_position": "UX Designer at Zomato",
       "pass_out_year": 2018,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/women/4.jpg"
+
     },
     {
       "id": 5,
       "name": "Vikram Singh",
       "current_position": "AI Researcher at Microsoft",
       "pass_out_year": 2022,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/5.jpg"
+      
     },
     {
       "id": 6,
       "name": "Ananya Rao",
       "current_position": "Marketing Specialist at Amazon",
       "pass_out_year": 2017,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/women/6.jpg"
     },
     {
       "id": 7,
       "name": "Rahul Nair",
       "current_position": "Cybersecurity Consultant at Infosys",
       "pass_out_year": 2020,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/7.jpg"
     },
     {
       "id": 8,
       "name": "Sneha Iyer",
       "current_position": "Finance Analyst at Deloitte",
       "pass_out_year": 2016,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/women/8.jpg"
     },
     {
       "id": 9,
       "name": "Karan Gupta",
       "current_position": "Full Stack Developer at Swiggy",
       "pass_out_year": 2021,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/9.jpg"
     },
     {
       "id": 10,
       "name": "Pooja Malhotra",
       "current_position": "HR Manager at Wipro",
       "pass_out_year": 2019,
-      "image_url": "https://via.placeholder.com/150"
+      "image_url": "https://randomuser.me/api/portraits/men/10.jpg"
     }
   ]
   

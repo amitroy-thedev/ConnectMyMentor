@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Button from "../components/Button";
 import Navbar from "../components/Navbar";
+import { auth } from "../firebase";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 export default function Login() {
   const [email, setEmail] = useState("");
@@ -9,7 +11,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   
-  const navigate = useNavigate(); // To redirect on success
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -23,13 +25,15 @@ export default function Login() {
     }
 
     try {
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
-      console.log({ fullName, email, password, isMentor });
-      navigate("/dashboard"); 
+      await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      setLoading(false);
+      navigate("/dashboard");
     } catch (err) {
-      setError("Registration failed. Please try again.");
-    } finally {
+      setError(err.code);
       setLoading(false);
     }
   };
