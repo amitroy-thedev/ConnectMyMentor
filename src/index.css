@@ -9,8 +9,8 @@
   --color-lavender: #C5BAFF;
 }
 
-.body{
-  font-family: "Monserrat",sans-serif;
+html, body{
+  font-family: 'Montserrat' ,sans-serif;
 }
      
     
