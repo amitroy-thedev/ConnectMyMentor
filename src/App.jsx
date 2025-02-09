@@ -1,9 +1,11 @@
 import { useState } from 'react'
+import Home from './pages/Home'
 import Dashboard from './pages/Dashboard'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Navbar from './components/Navbar'
+import { Routes, Route } from 'react-router-dom';
 
 
 function App() {
@@ -11,9 +13,10 @@ function App() {
 
   return (
 
-    <div className=' bg-sky-900 h-screen text-white text-2xl flex justify-center items-center'>
-      <Dashboard/>
-    </div>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="/dashboard" element={<Dashboard/>}/>
+    </Routes>
 
   )
 }
