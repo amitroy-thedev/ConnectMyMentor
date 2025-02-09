@@ -1,12 +1,21 @@
-import React from 'react'
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import MentorList from "../components/MentorList";
 
 const Dashboard = () => {
+  const [name, setName] = useState("Amit");
   return (
-    <div className=' h-screen flex justify-center'>
+    <>
+      <Navbar onHome={false} />
 
-    welcome to the dashboard!
-    </div>
-  )
-}
+      <div className="p-3 text-2xl font-medium">
+        <h1>Welcome {name}</h1>
+      </div>
 
-export default Dashboard
+      <MentorList/>
+
+    </>
+  );
+};
+
+export default Dashboard;
