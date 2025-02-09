@@ -29,7 +29,7 @@ const Card = () => {
   ];
 
   return (
-    <div className="p-[000.1px] ">
+    <div className="p-[000.1px]" style={{backgroundColor: "var(--color-softBlue)"}}>
       <div className=" flex justify-center text-5xl font-bold text-white my-14">
         Why Choose Connect My Mentor?
       </div>

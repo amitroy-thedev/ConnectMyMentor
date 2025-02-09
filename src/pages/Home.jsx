@@ -13,14 +13,14 @@ const Home = () => {
       <div className="bg-[url('./assets/wave-design.svg')] h-screen bg-cover bg-center bg-no-repeat">
         <Navbar onHome={true} />
         <div className="items-center justify-center flex flex-col mt-36">
-          <h1 className="font-bold text-2xl text-violet-500 flex-col flex items-center">
+          <h1 className="font-bold lg:text-2xl text-violet-500 flex-col flex items-center">
             <div className="mt-2 tracking-wider">
               Bridge the Gap with Alumni Mentors!
             </div>
-            <div className="text-5xl">Connect, Learn, Grow </div>{" "}
+            <div className="lg:text-5xl text-3xl">Connect, Learn, Grow </div>{" "}
           </h1>
 
-          <div className="mt-6 flex">
+          <div className="mt-12 flex">
             <Link className="px-2 py-2  border border-violet-600 rounded-lg duration-300 cursor-pointer flex gap-2 justify-center items-center font-medium " to={!currentUser ? "/login" : "/dashboard"}>
               <Compass color="#541690" /> Find Alumni Mentors
             </Link>

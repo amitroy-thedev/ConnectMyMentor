@@ -37,11 +37,13 @@ function Navbar({onHome}) {
                         </Link>
                     </div>
                 </div>}
-                    {currentUser && <div>
+                    {currentUser && 
+                    <div>
                         <button className='px-3 py-2 bg-[#ff5151] font-medium text-white border rounded-md hover:cursor-pointer hover:bg-[#f82b2b] duration-300' onClick={signUserOut}>
                             Logout
                         </button>
-                    </div>}
+                    </div>
+                    }
             </div>
         </>
     )
