@@ -1,7 +1,7 @@
-# 🚀 Connect My Mentor  
+# 🚀 Connect My Mentor  -  Connect, Learn, Grow
 *A platform connecting college alumni with current students for mentorship and career guidance.*  
 
-![Project Banner](https://your-image-link.com) *(Optional: Add a relevant banner image here)*  
+![image](https://github.com/user-attachments/assets/5033e52f-b91b-4664-90a7-81e79c91d392)
 
 ## 🌟 Overview  
 **Connect My Mentor** bridges the gap between alumni and students, enabling mentorship, career guidance, and professional networking within the college community.  
@@ -25,9 +25,6 @@
 - **Vercel** – Frontend hosting  
 - **Firebase Functions** – Backend logic  
 
-## 📸 Screenshots  
-*(Add relevant screenshots of your platform here)*  
-
 ## 📢 Roadmap  
 - 🔹 College based mentor recommendations  
 - 🔹 Group mentorship sessions  
@@ -47,9 +44,11 @@ This project is licensed under the **MIT License**.
 ## 📢 Contact & Support  
 For any queries or suggestions, feel free to reach out:  
 amitroy-thedev@gmail.com
+<br>
 afzalmir2003@gmail.com
+<br>
 arpanbera475@gmail.com 
 
 ---
 
-🔥 **Empowering Students | Strengthening Alumni Bonds** 🔥
+### 🔥 **Empowering Students | Strengthening Alumni Bonds** 🔥
