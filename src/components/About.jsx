@@ -34,7 +34,7 @@ const Card = () => {
         Why Choose Connect My Mentor?
       </div>
 
-      <section className="grid md:grid-cols-2 gap-8 mx-4">
+      <section className="grid md:grid-cols-2 gap-8 m-4">
         {details.map((item, index) => (
           <div
             className="bg-white p-6 rounded-lg shadow-sm border-white mt-3"
