@@ -2,6 +2,13 @@
 
 @import "tailwindcss";
 
+:root {
+  --color-lightestBlue: #FBFBFB;
+  --color-skyBlue: #E8F9FF;
+  --color-softBlue: #C4D9FF;
+  --color-lavender: #C5BAFF;
+}
+
 .body{
   font-family: "Monserrat",sans-serif;
 }
